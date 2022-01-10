@@ -1,0 +1,361 @@
+{
+	"info": {
+		"_postman_id": "3ec82515-bbbf-42af-9086-cbfc9672c43d",
+		"name": "Bank_API_NCI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "Greetings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:49000/api/greetings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "49000",
+							"path": [
+								"api",
+								"greetings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:49000/api/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "49000",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:49000/api/customers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "49000",
+							"path": [
+								"api",
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer Accounts by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:49000/api/customers/1/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "49000",
+							"path": [
+								"api",
+								"customers",
+								"1",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Specific Account for Customer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:49000/api/customers/1/accounts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "49000",
+							"path": [
+								"api",
+								"customers",
+								"1",
+								"accounts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Transactions for Customer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:49000/api/customers/1/accounts/1/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "49000",
+							"path": [
+								"api",
+								"customers",
+								"1",
+								"accounts",
+								"1",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "Create Customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"address\": \"lAURA\",\r\n  \"email\": \"tom@45454mail.com\",\r\n  \"name\": \"Ryan Thompson\",\r\n  \"passcode\": 12345\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:49000/api/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "49000",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Account",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"accType\": \"debit\",\r\n  \"balance\": 5000,\r\n  \"sortNum\": \"WASSUPPPPP\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:49000/api/customers/1/accounts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "49000",
+							"path": [
+								"api",
+								"customers",
+								"1",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Transaction",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"PAYE\": \"lad\",\r\n\t\"ammount\":1337 ,\r\n\t\"credit\": false,\r\n\t\"debit\": true,\r\n\t\"description\": \"New Transaction:\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:49000/api/customers/1/accounts/1/transactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "49000",
+							"path": [
+								"api",
+								"customers",
+								"1",
+								"accounts",
+								"1",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PUT",
+			"item": [
+				{
+					"name": "Update Balance",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"balance\": 10  \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:49000/api/customers/1/accounts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "49000",
+							"path": [
+								"api",
+								"customers",
+								"1",
+								"accounts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
