@@ -1,0 +1,9 @@
+com\mycompany\bank\services\TransactionsServices.class
+com\mycompany\bank\services\CustomersServices.class
+com\mycompany\bank\resources\CustomersResources.class
+com\mycompany\bank\models\Customers.class
+com\mycompany\bank\resources\TransactionsResources.class
+com\mycompany\bank\resources\AccountsResources.class
+com\mycompany\bank\models\Accounts.class
+com\mycompany\bank\services\AccountsServices.class
+com\mycompany\bank\models\Transactions.class
